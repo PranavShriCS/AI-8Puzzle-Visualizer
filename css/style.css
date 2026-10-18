@@ -1,0 +1,382 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #0b1120;
+    --surface: #121c30;
+    --surface-light: #1a2740;
+    --border: #293650;
+    --text: #edf3ff;
+    --muted: #9aabc5;
+    --primary: #60a5fa;
+    --primary-dark: #2563eb;
+    --accent: #34d399;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+.navbar {
+    background: rgba(11, 17, 32, 0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.navbar-brand {
+    color: var(--primary) !important;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: var(--muted) !important;
+    margin-left: 16px;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.hero {
+    padding: 100px 20px 90px;
+    background:
+        radial-gradient(ellipse at 50% 0%, #1e3a6380, transparent 65%),
+        var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 850px;
+    margin: 18px auto;
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.15;
+}
+
+.hero-description {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.btn-primary {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.btn-outline-secondary {
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.btn-outline-secondary:hover {
+    color: white;
+    background: var(--surface-light);
+    border-color: var(--primary);
+}
+
+.student-card,
+.panel,
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.student-card {
+    padding: 26px 30px;
+}
+
+.student-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+}
+
+.student-card p {
+    margin-bottom: 8px;
+    color: var(--muted);
+}
+
+.student-card strong {
+    color: var(--text);
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    margin: 8px 0;
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+}
+
+.panel {
+    padding: 28px;
+}
+
+.panel h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.algorithm-tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #1d3d69;
+    color: #bfdbfe;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #080e1b;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    aspect-ratio: 1;
+}
+
+.puzzle-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    border-radius: 9px;
+    background: linear-gradient(145deg, #263b5d, #182943);
+    color: #eff6ff;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-weight: 800;
+    box-shadow: inset 0 1px 0 #ffffff12;
+}
+
+.puzzle-tile.blank {
+    background: #111a2a;
+    border: 1px dashed #334155;
+    box-shadow: none;
+}
+
+.stat-card {
+    height: 100%;
+    padding: 20px;
+}
+
+.stat-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#search-status {
+    color: var(--accent);
+}
+
+.panel ul {
+    padding-left: 20px;
+    color: var(--muted);
+}
+
+.panel li {
+    margin-bottom: 8px;
+}
+
+footer {
+    background: #080e1b;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 70px 16px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        margin-left: 8px;
+        font-size: 0.85rem;
+    }
+
+    .panel,
+    .student-card {
+        padding: 20px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card strong {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Search visualization panels */
+
+.state-list {
+    max-height: 320px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.state-entry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.9rem;
+}
+
+.state-entry span {
+    font-family: monospace;
+    letter-spacing: 1px;
+    flex: 1;
+}
+
+.state-entry small {
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.solution-path {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 8px 2px 14px;
+}
+
+.solution-entry {
+    flex: 0 0 auto;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+}
+
+.solution-entry > strong {
+    font-size: 0.85rem;
+}
+
+.mini-board {
+    width: 108px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.mini-tile {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.mini-tile.blank {
+    background: rgba(148, 163, 184, 0.15);
+    border: 1px dashed rgba(148, 163, 184, 0.4);
+}
+
+#search-status,
+#summary-status {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#speed-control {
+    cursor: pointer;
+}
+
+.state-list:empty::after {
+    content: "No states to display.";
+    color: #94a3b8;
+    padding: 8px 0;
+}
+
+@media (max-width: 576px) {
+    .state-entry {
+        font-size: 0.8rem;
+    }
+
+    .solution-entry {
+        min-width: 105px;
+    }
+
+    .mini-board {
+        width: 90px;
+    }
+}
